@@ -31,7 +31,7 @@ module "eks_addons" {
   oidc_provider         = module.eks.oidc_provider
 
   external_dns_zones    = ["example.com", "example.co.kr"]
-  cert_manage_zones     = ["example.com", "example.co.kr"]
+  cert_manager_zones     = ["example.com", "example.co.kr"]
   acme_email            = "noreply@example.com"
 
   cluster_ca_certificate = module.eks.cluster_certificate_authority_data
