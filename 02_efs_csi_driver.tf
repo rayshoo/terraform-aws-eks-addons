@@ -3,8 +3,13 @@
 ################################################################################
 # https://github.com/aws-ia/terraform-aws-eks-blueprints/blob/v3.5.2/examples/aws-efs-csi-driver/main.tf
 
+resource "random_string" "suffix" {
+  length  = 8
+  special = false
+}
+
 resource "aws_efs_file_system" "efs" {
-  creation_token = "efs"
+  creation_token = "${random_string.suffix.result}"
   encrypted      = true
 }
 
