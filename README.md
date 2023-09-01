@@ -38,5 +38,4 @@ module "eks_addons" {
 
   tags = local.tags
 }
-
 ```
