@@ -48,7 +48,7 @@ module "eks_addons" {
     set = [
       {
         name = "policy"
-        value = "upsert-only"
+        value = "${var.external_dns_policy}"
       },
       {
         name = "domainFilters"

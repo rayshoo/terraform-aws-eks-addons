@@ -48,6 +48,11 @@ variable "cluster_ca_certificate" {
   type        = any
   default     = {}
 }
+variable "external_dns_policy" {
+  description = "external-dns policy"
+  type        = string
+  default     = "upsert-only"
+}
 variable "external_dns_zones" {
   description = "external-dns zone list"
   type        = list(string)
