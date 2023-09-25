@@ -1,5 +1,5 @@
 # terraform aws eks addons
-To install karpenter addons with deployment kind addons. Install this after install [rayshoo/eks-init/aws](github.com/rayshoo/terraform-aws-eks-init) module.
+To install karpenter addons with deployment kind addons. Install this after install [rayshoo/eks-init/aws](https://github.com/rayshoo/terraform-aws-eks-init) module.
 
 ## Example
 ```hcl
@@ -11,13 +11,13 @@ module "eks" {
 
 module "eks_init" {
   source  = "rayshoo/eks-init/aws"
-  version = "1.0.0"
+  version = "1.0.1"
   ...
 }
 
 module "eks_addons" {
   source  = "rayshoo/eks-addons/aws"
-  version = "1.0.0"
+  version = "1.0.2"
 
   region                = var.region
   vpc_id                = module.vpc.vpc_id
