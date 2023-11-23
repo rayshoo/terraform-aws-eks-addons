@@ -45,7 +45,7 @@ module "eks_addons" {
   enable_external_dns = true
   external_dns_route53_zone_arns = local.external_dns_route53_zone_arns
   external_dns = {
-    set = [
+    set = concat([
       {
         name = "policy"
         value = "${var.external_dns_policy}"
@@ -54,7 +54,9 @@ module "eks_addons" {
         name = "domainFilters"
         value = "{${local.external_dns_domain_filters}}"
       }
-    ]
+    ],
+    try(var.external_dns.set, [])
+    )
   }
   external_secrets = {
     service_account_name = "${local.es_service_account_name}"

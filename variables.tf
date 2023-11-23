@@ -58,6 +58,11 @@ variable "external_dns_zones" {
   type        = list(string)
   default     = []
 }
+variable "external_dns" {
+  description = "external-dns add-on configuration values"
+  type        = any
+  default     = {}
+}
 variable "cert_manager_zones" {
   description = "cert-manager zone list"
   type        = list(string)
