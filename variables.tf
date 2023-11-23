@@ -55,7 +55,7 @@ variable "external_dns_policy" {
 }
 variable "external_dns_zones" {
   description = "external-dns zone list"
-  type        = list(string)
+  type        = list(any)
   default     = []
 }
 variable "external_dns" {
