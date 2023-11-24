@@ -78,3 +78,8 @@ variable "tags" {
   type        = any
   default     = {}
 }
+variable "aws_ebs_csi_driver" {
+  description = "aws ebs csi driver override variables"
+  type        = any
+  default     = {}
+}
