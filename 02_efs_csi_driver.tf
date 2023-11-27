@@ -24,6 +24,8 @@ resource "aws_security_group" "efs_sg" {
     to_port     = 2049
     protocol    = "tcp"
   }
+
+  tags = try(var.aws_efs_csi_driver.tags, {})
 }
 
 resource "aws_efs_mount_target" "efs_mt" {

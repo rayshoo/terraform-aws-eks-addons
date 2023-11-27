@@ -83,3 +83,8 @@ variable "aws_ebs_csi_driver" {
   type        = any
   default     = {}
 }
+variable "aws_efs_csi_driver" {
+  description = "aws efs csi driver override variables"
+  type        = any
+  default     = {}
+}
